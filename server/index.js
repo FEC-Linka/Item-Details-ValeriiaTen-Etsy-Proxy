@@ -30,6 +30,19 @@ app.get('/itemDetails/:productId', (req, res) => {
     });
 })
 
+app.get('/info', (req, res) => {
+  axios.get(`http://localhost:5000${req.path}`)
+    .then(({ headers, data }) => {
+      // handle success
+      res.setHeader('content-type', headers['content-type']);
+      res.send(data);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
+})
+
 app.listen(port, () => {
   console.log(`Proxy Server listening on port ${port}`);
 })

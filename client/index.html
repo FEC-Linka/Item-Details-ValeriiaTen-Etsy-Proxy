@@ -4,16 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proxy Server</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        width: 1400px;
+        display: flex;
+        margin: 0 auto;
+      }
+      #left-col {
+        flex: 2 1;
+      }
+      #right-col {
+        flex: 1 1;
+      }
+      #pictures,
+      #reviews,
+      #shipping,
+      #details {
+        border: 1px solid #000;
+      }
+    </style>
   </head>
   <body>
     <!-- <div id="pictures"></div> -->
     <!-- <div id="reviews"></div> -->
-    <div id="app"></div>
-    <!-- <div id="shipping"></div> -->
-
+    <!-- <div id="left-col">
+      <div id="pictures-area"></div>
+      <div id="reviews"></div>
+    </div> -->
+    <div id="right-col">
+      <div id="details"></div>
+      <div id="shipping"></div>
+    </div>
+    <!-- <script src="http://localhost:3000/main.bundle.js"></script>  -->
     <script
       type="text/javascript"
       src="http://localhost:5000/bundle.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://localhost:7100/dist/ttreit-shipping.js"
     ></script>
   </body>
 </html>
